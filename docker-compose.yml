@@ -1,0 +1,10 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - 80:80
+    volumes:
+      - type: bind
+        source: ./backend
+        target: /usr/src/todo
