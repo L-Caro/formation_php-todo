@@ -5,8 +5,10 @@
 	--primary          : #8E44AD;
 	--text-color       : #444444;
 	--text-color-light : #FFFFFF;
+	--text-danger      : #9C1515;
 	--font-family      : 'Open Sans', 'sans-serif';
 	--background-light : #ECF0F1;
+	--border-radius    : 0.3rem;
 	--box-shadow       : rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
@@ -28,6 +30,50 @@ h1, p {
 	margin : 0;
 }
 
+h1 {
+	margin-bottom : 1rem;
+}
+
+ul {
+	list-style-type : none;
+	padding         : 0;
+}
+
+/* Typo */
+
+.btn {
+	background    : white;
+	border        : 0;
+	border-radius : var(--border-radius);
+	box-shadow    : var(--box-shadow);
+	color         : var(--text-color);
+	cursor        : pointer;
+	font-size     : 1.6rem;
+	font-weight   : bold;
+	margin        : 0 .5rem;
+	padding       : 1rem 1.5rem;
+}
+
+.btn-primary {
+	background-color : var(--primary);
+	color            : var(--text-color-light);
+}
+
+.btn-danger {
+	background-color : var(--text-danger);
+	color            : var(--text-color-light);
+}
+
+.text-danger {
+	color       : var(--text-danger);
+	font-size   : 1.2rem;
+	font-weight : bold;
+}
+
+.btn-small {
+	font-size : 1.4rem;
+	padding   : 0.5rem 1rem;
+}
 
 /* Container */
 
@@ -85,4 +131,48 @@ footer {
 
 .todo-container h1 {
 	text-align : center;
+}
+
+.todo-form {
+	align-items : center;
+	display     : flex;
+	flex-flow   : row nowrap;
+}
+
+.todo-form label {
+	flex         : 1;
+	margin-right : 0.5rem;
+}
+
+.todo-form label input {
+	border        : var(--border);
+	border-radius : var(--border-radius);
+	padding       : 1rem 1.5rem;
+	width         : 100%;
+}
+
+.todo-item {
+	align-items   : center;
+	display       : flex;
+	flex-flow     : row;
+	margin-bottom : 0.5rem;
+	padding       : 0.3rem 1.5rem;
+}
+
+.todo-item:nth-child(odd) {
+	background : var(--text-color);
+	color      : white;
+}
+
+.todo-name {
+	flex         : 1;
+	margin-right : 0.5rem;
+}
+
+.todo-done {
+	opacity : 0.5;
+}
+
+.todo-done span {
+	text-decoration : line-through;
 }
