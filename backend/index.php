@@ -53,7 +53,7 @@ require_once 'includes/header.php' ?>
 
 <div class="content">
 	<div class="todo-container">
-		<h1>Ma To-do list</h1>
+		<h1>To-do list</h1>
 		<form action="/" method="POST" class="todo-form">
 			<label for="input">
 				<input value="<?= $todo ?>" name="todo" type="text" id="input">
