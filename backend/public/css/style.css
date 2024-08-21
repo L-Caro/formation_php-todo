@@ -2,7 +2,8 @@
 :root {
 	--border           : 1px solid #EEEEEE;
 	--dark             : #2C3E50;
-	--primary          : #989347;
+	--primary          : #DA8321;
+	--valid            : #579C0F;
 	--text-color       : #444444;
 	--text-color-light : #FFFFFF;
 	--text-danger      : #9C1515;
@@ -55,7 +56,7 @@ ul {
 }
 
 .btn-primary {
-	background-color : var(--primary);
+	background-color : var(--valid);
 	color            : var(--text-color-light);
 }
 
@@ -153,6 +154,7 @@ footer {
 
 .todo-item {
 	align-items   : center;
+	border-radius : var(--border-radius);
 	display       : flex;
 	flex-flow     : row;
 	margin-bottom : 0.5rem;
@@ -160,8 +162,15 @@ footer {
 }
 
 .todo-item:nth-child(odd) {
-	background : var(--text-color);
+	background : var(--primary);
 	color      : white;
+
+	padding    : 0.5rem 1rem;
+}
+
+.todo-item:nth-child(even) {
+	padding : 0.5rem 1rem;
+
 }
 
 .todo-name {
@@ -175,4 +184,48 @@ footer {
 
 .todo-done span {
 	text-decoration : line-through;
+}
+
+
+@media screen and (max-width : 768px) {
+	.btn {
+		font-size : 1.2rem;
+		padding   : 0.8rem 1.2rem;
+	}
+
+	.btn-small {
+		font-size : 1.2rem;
+		padding   : 0.4rem 0.8rem;
+	}
+
+	.container {
+		font-size : 1.4rem;
+	}
+
+	.logo {
+		font-size : 1.6rem;
+	}
+
+	.todo-container {
+		min-height : 20rem;
+		min-width  : 30rem;
+		padding    : 1rem;
+	}
+
+	.todo-item {
+		padding : 0.2rem 0.6rem;
+	}
+
+	.todo-form label {
+		margin-right : 0.3rem;
+	}
+
+	.todo-form label input {
+		padding : 0.5rem 0.6rem;
+	}
+
+	header, footer {
+		padding : 1rem;
+	}
+
 }
